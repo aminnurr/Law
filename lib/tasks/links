@@ -1,0 +1,4 @@
+require "nokogiri"
+doc=Nokogiri::HTML(open('htt[://http://www.e-lawresources.co.uk
+
+puts doc.class
