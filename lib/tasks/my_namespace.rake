@@ -1,9 +1,16 @@
 require "nokogiri"
 require "open-uri"
-require 'mechanize'
 require "json"
-begin 
-file = File.read('case_title.json')
+
+namespace :my_namespace do
+
+  desc "Scrapping data and storing inside database."
+  task scrapper: :environment do
+  	begin 
+  		json_file = 'case_title.json'
+  		file = File.read(json_file)
+  	#path=File.absolute_path "case_title.json"
+  	#file = File.open(path).read
 
 data_hash = JSON.parse(file)
 
@@ -34,3 +41,6 @@ data_hash.each do | line|
 end 
 end 
 end 
+  end
+
+end

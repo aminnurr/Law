@@ -14,8 +14,8 @@ require "json"
 
 
 begin 
-
-file = File.read('case_title.json')
+ file = File.read('/home/dave/Law/lib/tasks/case_title.json')
+#file = File.read('case_title.json')
 
 data_hash = JSON.parse(file)
 
