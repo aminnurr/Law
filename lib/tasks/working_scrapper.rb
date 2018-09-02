@@ -13,7 +13,8 @@ data_hash.each do | line|
 	doc =Nokogiri::HTML(open(url))
 	title = doc.tite
    data=  doc.xpath('//*[@id="layout_zone1"]/div').text
-   Case.update(title: title , content: content)
+   case = Case.new(title: title, content: data)
+   #Case.update(title: title , content: content)
 
 
  rescue Errno::ENOENT => e
@@ -22,14 +23,14 @@ data_hash.each do | line|
  		doc = Nokogiri::HTML(open("http://www.e-lawresources.co.uk/cases/#{url}"))
  		title = doc.title
  		data=  doc.xpath('//*[@id="layout_zone1"]/div').text
- 		Case.update(title: title , content: content)
+ 		#Case.update(title: title , content: content)
  		#puts data
 
  	else  
    doc =Nokogiri::HTML(open("http://www.e-lawresources.co.uk/#{url}"))
    puts doc.title 
    data =  doc.xpath('//*[@id="layout_zone1"]/div').text
-   Case.update(title: title , content: content)
+  # Case.update(title: title , content: content)
  	#puts data
 end 
 end 
