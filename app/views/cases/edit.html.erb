@@ -1,6 +1,24 @@
 <h1>Editing Case</h1>
 
-<%= render 'form', case: @case %>
+
+<%= form_for @case do |form| %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_area :content %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+
 
 <%= link_to 'Show', @case %> |
 <%= link_to 'Back', cases_path %>

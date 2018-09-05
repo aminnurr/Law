@@ -1,3 +1,138 @@
-// Place all the styles related to the Cases controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css');
+@import url('https://fonts.googleapis.com/css?family=Quattrocento');
+
+a {
+		text-decoration: none !important;
+		color: inherit !important;
+	}
+
+body {
+	font-family: 'Quattrocento', serif;
+}
+
+
+.top-white-nav {
+	padding: 12px;
+	margin-bottom: 30px;
+}
+
+.alight_right {
+	text-align: right;
+}
+
+
+.alight_left {
+	text-align: left;
+}
+
+.logo {
+	width: 100px;
+	background: black;
+	font-size: 25px;
+	text-align: center;
+	padding: 12px;
+	font-weight: 600;
+	color: white
+	
+}
+
+
+
+#content {
+    padding: 15px;
+    line-height: 2.1rem;
+    font-size: 14pt;
+}
+
+#title {
+	padding: 15px;
+
+}
+
+.small_container {
+	width: 70%;
+	margin: 0 auto;
+}
+
+h1 {
+	padding: 0;
+	margin: 0;
+}
+
+
+#search_bar {
+	// background: red;
+	width: 100%;
+	height: 100%;
+
+	input[type="search"] {
+		width: 100%;
+		border: none;
+		background: none;
+		outline: none;
+		padding: 12px;
+		padding-left: 30px;
+		padding-right: 30px;
+		border-radius: 50px !important;
+		box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.11);
+	}
+}
+
+
+// case index page
+
+// list view
+
+.lists_display {
+	width: 600px;
+	margin: 0 auto;
+}
+
+#no_content_red {
+	color: white;
+	background: #5f27cd;
+	padding: 6px;
+	border-radius: 3px;
+	font-family: sans-serif;
+	border-left: 4px solid #ff9f43;
+}
+
+#no_title_yellow {
+	color: white;
+	background: #ff9f43;
+	border-left: 5px solid red;
+	padding-left: 10px;
+	padding: 6px;
+}
+
+
+#birth_mark {
+	background: #5f27cd;
+	color: #f5f6fa;
+	padding: 6px;
+	padding-left: 12px;
+	padding-right: 12px;
+	border-radius: 1px;
+	border-left: 4px solid #ee5253;
+}
+
+#submit_report {
+	padding: 12px;
+	border-raius: 2px;
+	background: #5f27cd;
+	color: white;
+	border: none;
+	border-radius: 12px;
+
+}
+
+
+.item {
+	width: 30%;
+    float: left;
+	padding: 12px;
+	box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.11);
+	margin: 4px;
+	margin-top: 30px;
+	margin-bottom: 32px;
+}

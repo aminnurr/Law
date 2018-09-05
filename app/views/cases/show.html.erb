@@ -1,67 +1,40 @@
-<p id="notice"><%= notice %></p>
-<style>
+<div class="container">
+	<div class="small_container">
 
-.topnav {
-  overflow: hidden;
-  background-color:  #17b0cf;
-}
+		<div>
+		  <strong>Case Name</strong> <br>
+		  <h1 id="title"><%= @case.title %></h1>
+		</div>
 
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
+		<% if @case.content? %>
+		<div>
 
-.topnav a:hover {
-  background-color: #17b0cf;
-  color: red;
-}
+			<strong>Facts and Judgment </strong>
+			<br>
+			
+			<div id="content">
+			  <%= @case.content %>
+			</div>
 
-.topnav a.active {
-   background-color: white 
-  color: white;
-}
+		</div>
+		<% end %>
 
-body{
-	 background-color:  #17b0cf;
-	 font-size: large;
-}
-p {
-	font-size: large;
-	font-family: Arial, Helvetica, sans-serif;
-}
-#logo{
-  font-family: 'Hind', sans-serif;
-  font-size: 50px;
-  letter-spacing: -2px;
-  text-shadow: 1px 1px 2px #c4c4c4; 
-  padding-left: 20px;
-  padding-right: 40px;
-  margin-right: 10px;
-  color: white;
+		<hr>
 
-}
-</style>
-<div class="topnav">
-  <a id="logo"> Lawinfo</a>
-  <a class="active">  <%= link_to 'Home', cases_path %></a>
-  </div>
-<body>
-<p>
-  <strong>Case Name</strong>
-  <%= @case.title %>
-</p>
-
-<p>
-  <strong>Facts and Judgment </strong>
-  <%= @case.content %>
-</p>
-
-</body>
+		<strong id="birth_mark">Similer Cases</strong>
 
 
-<%= link_to 'Back', cases_path %>
+		<div class="related_cases">
+			<% @related_cases.each do |c| %>
+				<a href="<%= case_path(c)%>">
+					<div class="item">
+						<h5><%= c.title %></h5>
+						<%= truncate(c.content, length: 100) %>
+					</div>
+				</a>
+			<% end %>
 
+
+		</div>
+	</div>
+</div>
