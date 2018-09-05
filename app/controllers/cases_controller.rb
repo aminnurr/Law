@@ -1,5 +1,5 @@
 class CasesController < ApplicationController
-  before_action :set_case, only: [:show, :update]
+  before_action :set_case, only: [:show, :update, :edit]
 
   def index
     @case = Case.paginate(:page => params[:page])
@@ -10,7 +10,6 @@ class CasesController < ApplicationController
   end
 
   def edit
-    @case = Case.find(params[:id])
   end
 
 
@@ -31,7 +30,8 @@ class CasesController < ApplicationController
   private
 
     def set_case
-      @case = Case.find(params[:id])
+      @case = Case.friendly.find(params[:id])
+      # .find(params[:id])
     end
 
 
