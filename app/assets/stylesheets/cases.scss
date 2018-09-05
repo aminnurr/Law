@@ -136,3 +136,27 @@ h1 {
 	margin-top: 30px;
 	margin-bottom: 32px;
 }
+
+.previous_page {
+	box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.11);
+	padding: 12px;
+	margin: 5px;
+}
+
+.next_page {
+	box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.11);
+	padding: 12px;
+	margin: 5px;
+}
+
+.disabled {
+	background: #f1f1f1;
+}
+
+.pagination {
+	padding: 12px;
+	text-align: center;
+	width: 100%;
+	margin-top: 19px;
+	margin-bottom: 19px;
+}

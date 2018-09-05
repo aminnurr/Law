@@ -2,7 +2,7 @@ class CasesController < ApplicationController
   before_action :set_case, only: [:show, :update]
 
   def index
-    @case = Case.all
+    @case = Case.paginate(:page => params[:page])
   end
 
   def show

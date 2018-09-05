@@ -25,6 +25,8 @@ gem 'jbuilder', '~> 2.5'
 #gems added below by me 
 
 gem 'friendly_id', '~> 5.2.0' # for urls linking 
+gem 'will_paginate', '~> 3.1.0'
+
 
 #aboved gems added by me
 
