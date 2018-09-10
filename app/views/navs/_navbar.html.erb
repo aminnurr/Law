@@ -1,6 +1,6 @@
-<nav class="top-white-nav">
+<nav class="top-white-nav" ng-controller="searchCtrl">
   <div class="container">
-    
+
     <div class="row">
       <div class="col alight_left">
         <a href="<%= root_path %>">
@@ -9,7 +9,21 @@
       </div>
       <div class="col">
         <div id="search_bar">
-          <input type="search" placeholder="Search ...">
+          <input type="search" placeholder="Search ..." ng-model="keyword" id="searchBox" onfocus="showSearchResults()">
+          <div class="searchResults disable" id="searchResults">
+            <ul>
+              <li ng-repeat="law in cases | filter: keyword">
+                <h5>
+                  <a ng-href="{{law.case_link}}">
+                    {{law.case_name}}
+                    <hr>
+                  </a>
+                </h5>
+              </li>
+            </ul>
+          </div>
+          <div id="counter_event" onClick="counterAct()" class="disable">
+          </div>
         </div>
       </div>
       <div class="col alight_right">
